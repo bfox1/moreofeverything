@@ -42,7 +42,8 @@ public class ItemOmniTool extends ItemTool {
 	}
 
 	public boolean canHarvestBlock(Block par1Block, ItemStack itemStack) {
-		return this.canHarvestBlock(par1Block);
+		//return this.canHarvestBlock(par1Block);
+		return true;
 	}
 
 	/**
