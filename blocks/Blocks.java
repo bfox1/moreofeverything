@@ -51,8 +51,8 @@ public class Blocks {
 			//Ore block Name registration
 		LanguageRegistry.addName(verbalore, Names.Verbalore_name);
 			//Special block Name registration
-		LanguageRegistry.addName(verbalfurnaceIdle, Names.verbalfurnaceIdle_name);
-		LanguageRegistry.addName(verbalfurnaceActive, Names.verbalfurnaceActive_name);
+		//LanguageRegistry.addName(verbalfurnaceIdle, Names.verbalfurnaceIdle_name);
+		//LanguageRegistry.addName(verbalfurnaceActive, Names.verbalfurnaceActive_name);
 	}
 	
 	public static void addHarvestLevel() {
