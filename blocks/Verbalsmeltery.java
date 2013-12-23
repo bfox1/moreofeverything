@@ -85,7 +85,7 @@ public class Verbalsmeltery extends BlockContainer {
 		return new TileEntityVerbalSmeltery();
 	}
 	
-public void onBLockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLivingBase, ItemStack itemstack){
+public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLivingBase, ItemStack itemstack){
 		int l = MathHelper.floor_double((double) (entityLivingBase.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 		
 		if(l == 0){
