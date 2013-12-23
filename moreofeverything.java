@@ -27,6 +27,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  * This is below is linked to modID. Basic requirements.
  * 
  */
+//This is my comment
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION)
 @NetworkMod(channels = { ModInfo.CHANNEL }, clientSideRequired = true, serverSideRequired = true)
 public class moreofeverything {
