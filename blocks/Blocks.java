@@ -1,16 +1,29 @@
 package moreofeverything.blocks;
 
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.MinecraftForge;
+import moreofeverything.moreofeverything;
 import moreofeverything.blocks.compressed.Verbalblock;
 import moreofeverything.blocks.Verbalbrick;
+import moreofeverything.gui.GuiHandler;
+import moreofeverything.lib.ModInfo;
 import moreofeverything.lib.config.Names;
 import moreofeverything.lib.config.ids;
+import moreofeverything.tileentity.TileEntityVerbalSmeltery;
 
 public class Blocks {
+	/**
+	 * This line of code below relates to VerbalSmeltery and all its sub classes.
+	 */
+	@Instance(ModInfo.ID)
+	public static moreofeverything instance;
 	
+	public static final int guiIdVerbalsmeltery = 0;
+	
+
 		//Basic blocks
 	public static Block verbalblock;
 	public static Block verbalbrick;
@@ -54,6 +67,9 @@ public class Blocks {
 			//Special block Name registration
 		LanguageRegistry.addName(verbalsmelteryIdle, Names.verbalsmelteryIdle_name);
 		LanguageRegistry.addName(verbalsmelteryActive, Names.verbalsmelteryActive_name);
+		//This is for the GuiHandler
+		LanguageRegistry.instance().addStringLocalization("container.verbalSmeltery", "Verbal Smeltery");
+		new GuiHandler();
 	}
 	
 	public static void addHarvestLevel() {
