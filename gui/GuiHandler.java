@@ -23,7 +23,7 @@ public class GuiHandler implements IGuiHandler {
 			switch(ID){
 			case moreofeverything.blocks.Blocks.guiIdVerbalsmeltery:
 				if(entity instanceof TileEntityVerbalSmeltery){
-					//return new ContainerVerbalSmeltery(player.inventory, (TileEntityVerbalSmeltery) entity);
+					return new ContainerVerbalSmeltery(player.inventory, (TileEntityVerbalSmeltery) entity);
 				}
 			}
 		}

@@ -24,9 +24,20 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 		
 		private ItemStack[] slots = new ItemStack[3];
 		
+		public int smelterySpeed = 50;
+		
+		
+			//Time left for smeltery to burn for
+		public int burnTime;
+			// TIme start time for this fuel
+		public int currentItemBurnTime;
+			//How long time left before cooked
+		public int cokkTime;
+		
 		public int getSizeInventory(){
 			return this.slots.length;
 		}
+	
 		
 		public String getInvName(){
 			return this.isInvNameLocalized() ? this.localizedName : "container.verbalSmeltery";
@@ -71,6 +82,33 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 
 	public void closeChest() {
 		
+	}
+	public void updateEntity()
+	{
+		if(this.burnTime > 0)
+		{
+			this.burnTime--;
+		}
+		if(!this.worldObj.isRemote)
+		{
+			if(this.burnTime == 0 && this.canSmelt())
+			{
+				this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
+				
+				if(this.burnTime > 0)
+				{
+					if(this.slots[1] != null)
+					{
+						this.slots[1].stackSize--;
+						
+						if(this.slots[1].stackSize == 0)
+						{
+							this.slots[1] = this.slots[1].getItem().getContainerItemStack(this.slots[1]);
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	public static int getItemBurnTime(ItemStack itemstack){
