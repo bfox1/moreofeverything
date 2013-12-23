@@ -91,6 +91,7 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 		}
 		if(!this.worldObj.isRemote)
 		{
+			//Probably call canSmelt() on the item being passed in to this method.
 			if(this.burnTime == 0 && this.canSmelt())
 			{
 				this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
