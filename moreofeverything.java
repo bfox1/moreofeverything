@@ -3,10 +3,13 @@ package moreofeverything;
 import java.util.logging.Level;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemSlab;
 import moreofeverything.oregen.Worldgenore;
 import moreofeverything.proxies.CommonProxy;
 import moreofeverything.items.Items;
 import moreofeverything.blocks.Blocks;
+import moreofeverything.blocks.VerbalBrickSlab;
 import moreofeverything.lib.LogHelper;
 import moreofeverything.lib.ModInfo;
 import moreofeverything.lib.MoreofeverythingTab;
@@ -90,7 +93,7 @@ public class moreofeverything {
 	// And as of this happens AFTER the startup
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
-
+		Blocks.postInit(event);
 	}
 
 }

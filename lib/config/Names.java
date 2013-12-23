@@ -22,6 +22,13 @@ public class Names {
 	public static final String Verbalbrick_unlocalizedName = "Verbal_brick";
 	public static final String Verbalbrick_name = "Verbal Brick";
 	
+		//Slabs
+	public static final String VerbalbrickSlab_unlocalizedName = "Verbal_brick_slab";
+	public static final String VerbalbrickSlab_name = "Verbal Brick Slab";
+	
+	public static final String VerbalbrickDoubleSlab_unlocalizedName = "Verbal_brick_double_slab";
+	public static final String VerbalbrickDoubleSlab_name = "Verbal Brick Double-Slab";
+	
 		//Ore blocks
 	public static final String Verbalore_unlocalizedName = "Verbal_ore";
 	public static final String Verbalore_name = "Verbal Ore";

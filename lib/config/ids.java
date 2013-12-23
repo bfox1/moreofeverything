@@ -54,6 +54,13 @@ public class ids {
 	public static int verbalore_actual;
 	public static final int verbalore_default = 3002;
 	
+		//Id's for Half-slabs
+	public static int verbalBrickSlab_actual;
+	public static final int verbalBrickSlab_default = 3005;
+	
+	public static int verbalBrickDoubleSlab_actual;
+	public static final int verbalBrickDoubleSlab_default = 3006;
+	
 		//Ids for Special blocks
 	public static int verbalsmelteryIdle_actual;
 	public static final int verbalsmelteryIdle_default = 3003;
