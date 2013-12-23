@@ -25,11 +25,11 @@ public class ConfigHandler {
 		ids.verbalore_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.Verbalore_name, ids.verbalore_default).getInt();
 		
-		ids.verbalfurnaceIdle_actual = config.getBlock(config.CATEGORY_BLOCK,
-				Names.verbalfurnaceIdle_name, ids.verbalfurnaceIdle_default).getInt();
+		ids.verbalsmelteryIdle_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.verbalsmelteryIdle_name, ids.verbalsmelteryIdle_default).getInt();
 		
-		ids.verbalfurnaceActive_actual = config.getBlock(config.CATEGORY_BLOCK,
-				Names.verbalfurnaceActive_name, ids.verbalfurnaceActive_default).getInt();
+		ids.verbalsmelteryActive_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.verbalsmelteryActive_name, ids.verbalsmelteryActive_default).getInt();
 
 		ids.verbalore_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.Verbalore_name, ids.verbalore_default).getInt();

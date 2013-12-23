@@ -55,11 +55,11 @@ public class ids {
 	public static final int verbalore_default = 3002;
 	
 		//Ids for Special blocks
-	public static int verbalfurnaceIdle_actual;
-	public static final int verbalfurnaceIdle_default = 3003;
+	public static int verbalsmelteryIdle_actual;
+	public static final int verbalsmelteryIdle_default = 3003;
 	
-	public static int verbalfurnaceActive_actual;
-	public static final int verbalfurnaceActive_default = 3004; 
+	public static int verbalsmelteryActive_actual;
+	public static final int verbalsmelteryActive_default = 3004; 
 	
 	
 	//public static int MoeMetaItem_actual;

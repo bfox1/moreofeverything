@@ -18,8 +18,8 @@ public class Blocks {
 	public static Block verbalore;
 	
 		//Special Block 
-	public static Block verbalfurnaceIdle;
-	public static Block verbalfurnaceActive;
+	public static Block verbalsmelteryIdle;
+	public static Block verbalsmelteryActive;
 
 	public static void init() {
 		
@@ -36,10 +36,10 @@ public class Blocks {
 		
 			//Special block registration
 		
-		verbalfurnaceIdle = new verbalfurnace(ids.verbalfurnaceIdle_actual, false).setUnlocalizedName(Names.verbalfurnaceIdle_unlocalizedName).setHardness(3.5F);
-		GameRegistry.registerBlock(verbalfurnaceIdle, Names.verbalfurnaceIdle_name);
-		verbalfurnaceActive = new verbalfurnace(ids.verbalfurnaceActive_actual, true).setUnlocalizedName(Names.verbalfurnaceActive_unlocalizedName).setHardness(3.5F).setLightValue(0.9F);
-		GameRegistry.registerBlock(verbalfurnaceActive, Names.verbalfurnaceActive_name);
+		verbalsmelteryIdle = new Verbalsmeltery(ids.verbalsmelteryIdle_actual, false).setUnlocalizedName(Names.verbalsmelteryIdle_unlocalizedName).setHardness(3.5F);
+		GameRegistry.registerBlock(verbalsmelteryIdle, Names.verbalsmelteryIdle_name);
+		verbalsmelteryActive = new Verbalsmeltery(ids.verbalsmelteryActive_actual, true).setUnlocalizedName(Names.verbalsmelteryActive_unlocalizedName).setHardness(3.5F).setLightValue(0.9F);
+		GameRegistry.registerBlock(verbalsmelteryActive, Names.verbalsmelteryActive_name);
 
 		
 	}
@@ -51,8 +51,8 @@ public class Blocks {
 			//Ore block Name registration
 		LanguageRegistry.addName(verbalore, Names.Verbalore_name);
 			//Special block Name registration
-		LanguageRegistry.addName(verbalfurnaceIdle, Names.verbalfurnaceIdle_name);
-		LanguageRegistry.addName(verbalfurnaceActive, Names.verbalfurnaceActive_name);
+		LanguageRegistry.addName(verbalsmelteryIdle, Names.verbalsmelteryIdle_name);
+		LanguageRegistry.addName(verbalsmelteryActive, Names.verbalsmelteryActive_name);
 	}
 	
 	public static void addHarvestLevel() {

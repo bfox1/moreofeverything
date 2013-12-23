@@ -15,14 +15,14 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 
-public class verbalfurnace extends BlockContainer {
+public class Verbalsmeltery extends BlockContainer {
 
 	private final boolean isActive;
 
 	@SideOnly(Side.CLIENT)
 	private Icon iconFront;
 
-	public verbalfurnace(int id, boolean isActive) {
+	public Verbalsmeltery(int id, boolean isActive) {
 		super(id, Material.rock);
 
 		this.isActive = isActive;
@@ -43,7 +43,7 @@ public class verbalfurnace extends BlockContainer {
 	}
 	
 	public int idDropped(int par1, Random random, int par3){
-		return Blocks.verbalfurnaceIdle.blockID;
+		return Blocks.verbalsmelteryIdle.blockID;
 	}
 	
 	public void onBlockAdded(World world,int x, int y, int z){
@@ -79,7 +79,7 @@ public class verbalfurnace extends BlockContainer {
 	}
 	}
 	public TileEntity createNewTileEntity(World world){
-		return new TileEntityVerbalFurnace();
+		return new TileEntityVerbalSmeltery();
 	}
 }
 	

@@ -27,11 +27,11 @@ public class Names {
 	public static final String Verbalore_name = "Verbal Ore";
 	
 		//Special blocks
-	public static final String verbalfurnaceIdle_unlocalizedName = "Verbal_furnace";
-	public static final String verbalfurnaceIdle_name = "Verbal Furnace";
+	public static final String verbalsmelteryIdle_unlocalizedName = "Verbal_smeltery";
+	public static final String verbalsmelteryIdle_name = "Verbal Smeltery";
 	
-	public static final String verbalfurnaceActive_unlocalizedName = "Verbal_furnace_Active";
-	public static final String verbalfurnaceActive_name = "Verbal Furnace Active";
+	public static final String verbalsmelteryActive_unlocalizedName = "Verbal_smeltery_Active";
+	public static final String verbalsmelteryActive_name = "Verbal Smeltery Active";
 	
 		//Tools
 	public static final String Omnitool_unlocalizedName = "OmniTool";
