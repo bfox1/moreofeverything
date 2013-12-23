@@ -1,6 +1,6 @@
 package moreofeverything.blocks;
 
-/**import java.util.Random;
+import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -82,5 +82,5 @@ public class verbalfurnace extends BlockContainer {
 		return new TileEntityVerbalFurnace();
 	}
 }
-	*/
+	
 
