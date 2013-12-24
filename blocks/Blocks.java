@@ -36,6 +36,9 @@ public class Blocks {
 	public static Block verbalBrickSingleSlab;
 	public static Block verbalBrickDoubleSlab;
 	
+	public static Block verbalBlockSingleSlab;
+	public static Block verbalBlockDoubleSlab;
+	
 		//Ore Blocks
 	public static Block verbalore;
 	
@@ -59,6 +62,12 @@ public class Blocks {
 		verbalBrickDoubleSlab = new VerbalBrickSlab(ids.verbalBrickDoubleSlab_actual, true);
 		GameRegistry.registerBlock(verbalBrickDoubleSlab, Names.VerbalbrickDoubleSlab_name);
 		
+		verbalBlockSingleSlab = new VerbalBlockSlab(ids.verbalBlockSlab_actual, false);
+		GameRegistry.registerBlock(verbalBlockSingleSlab, Names.VerbalBlockSlab_name);
+		
+		verbalBlockDoubleSlab = new VerbalBlockSlab(ids.verbalBlockDoubleSlab_actual, true);
+		GameRegistry.registerBlock(verbalBlockDoubleSlab, Names.VerbalBlockDoubleSlab_name);
+		
 			//Ore block registration
 		verbalore = new Verbalore(ids.verbalore_actual);
 		GameRegistry.registerBlock(verbalore, Names.Verbalore_name);
@@ -81,6 +90,9 @@ public class Blocks {
 			//Half-slab Name registration
 		LanguageRegistry.addName(verbalBrickSingleSlab, Names.VerbalbrickSlab_name);
 		LanguageRegistry.addName(verbalBrickDoubleSlab, Names.VerbalbrickDoubleSlab_name);
+		
+		LanguageRegistry.addName(verbalBlockSingleSlab, Names.VerbalBlockSlab_name);
+		LanguageRegistry.addName(verbalBlockDoubleSlab, Names.VerbalBlockDoubleSlab_name);
 			//Ore block Name registration
 		LanguageRegistry.addName(verbalore, Names.Verbalore_name);
 			//Special block Name registration
@@ -97,6 +109,8 @@ public class Blocks {
 		MinecraftForge.setBlockHarvestLevel(verbalbrick, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(verbalBrickSingleSlab, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(verbalBrickDoubleSlab, "pickaxe", 3);
+		MinecraftForge.setBlockHarvestLevel(verbalBlockSingleSlab, "pickaxe", 3);
+		MinecraftForge.setBlockHarvestLevel(verbalBlockDoubleSlab, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(verbalore, "pickaxe", 3);
 	}
 	
@@ -105,6 +119,9 @@ public class Blocks {
 		Item.itemsList[verbalBrickSingleSlab.blockID] = (new ItemSlab(
 				verbalBrickSingleSlab.blockID - 256, ((BlockHalfSlab) verbalBrickSingleSlab),
 				((BlockHalfSlab) verbalBrickDoubleSlab), false));
+		Item.itemsList[verbalBlockSingleSlab.blockID] = (new ItemSlab(
+				verbalBlockSingleSlab.blockID - 256, ((BlockHalfSlab) verbalBlockSingleSlab),
+				((BlockHalfSlab) verbalBlockDoubleSlab), false));
 	}
 
 }

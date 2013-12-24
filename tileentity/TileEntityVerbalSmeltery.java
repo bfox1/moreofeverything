@@ -119,6 +119,12 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 		}
 	}
 	
+	public static boolean canSmelt()
+	{
+		//TODO Fill this method with code
+		return true;
+	}
+	
 	public static int getItemBurnTime(ItemStack itemstack){
 		if(itemstack == null){
 			return 0;
