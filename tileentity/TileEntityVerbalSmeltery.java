@@ -3,6 +3,7 @@ package moreofeverything.tileentity;
 import cpw.mods.fml.common.registry.GameRegistry;
 import moreofeverything.blocks.Verbalsmeltery;
 import moreofeverything.items.Items;
+import moreofeverything.lib.config.ids;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,6 +14,7 @@ import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInventory {
@@ -54,10 +56,24 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 	}
 
 	public ItemStack getStackInSlot(int i) {
-		return null;
+		return this.slots[i];
 	}
 
 	public ItemStack decrStackSize(int i, int j) {
+		if(this.slots[i] != null)
+		{
+			ItemStack itemstack;
+				if(this.slots[i].stackSize <= j)
+				{
+					itemstack = this.slots[i];
+					
+					this.slots[i] = null;
+					
+					return itemstack;
+				}else{
+					itemstack = this.slots[i].splitStack(j);
+				}
+		}
 		return null;
 	}
 
@@ -100,6 +116,8 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 			{
 				this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
 				
+				
+				
 				if(this.burnTime > 0)
 				{
 					flag1 = true;
@@ -135,9 +153,27 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 		}
 	}
 	
-	private void smeltItem()
+	public void smeltItem()
 	{
-		
+		if(this.canSmelt())
+		{
+			ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
+			
+			if(this.slots[2] == null)
+			{
+				this.slots[2] = itemstack.copy();
+			}else if(this.slots[2].isItemEqual(itemstack))
+			{
+				this.slots[2].stackSize += itemstack.stackSize;
+			}
+			
+			this.slots[0].stackSize--;
+			
+			if(this.slots[0].stackSize <= 0)
+			{
+				this.slots[0] = null;
+			}
+		}
 	}
 	
 	public boolean isBurning()
@@ -145,10 +181,22 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 		return cookTime > 0;
 	}
 	
-	public static boolean canSmelt()
+	private boolean canSmelt()
 	{
-		//TODO Fill this method with code
-		return true;
+		if(this.slots[0] == null)
+		{
+			return false;
+		}else{
+			ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
+			
+			if(itemstack == null) return false;
+			if(this.slots[2] == null) return true;
+			if(!this.slots[2].isItemEqual(itemstack)) return false;
+			
+			int result = this.slots[2].stackSize + itemstack.stackSize;
+			
+			return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
+		}
 	}
 	
 	public static int getItemBurnTime(ItemStack itemstack){
@@ -192,7 +240,7 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 	}
 	
 	public static boolean isItemFuel(ItemStack itemstack) {
-		return getItemBurnTime(itemstack) > 0;
+		return getItemBurnTime(itemstack) > 0 && itemstack.itemID == Items.Infusedstick.itemID;
 	}
 
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
@@ -205,6 +253,7 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 
 	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
 		return this.isItemValidForSlot(i, itemstack);
+		//return this.isItemValidForSlot(i,  itemstack) && itemstack.itemID == Items.Infusedstick.itemID;
 	}
 
 	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
