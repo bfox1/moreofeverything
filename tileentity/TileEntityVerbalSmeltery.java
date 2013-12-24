@@ -33,7 +33,7 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 			// TIme start time for this fuel
 		public int currentItemBurnTime;
 			//How long time left before cooked
-		public int cokkTime;
+		public int cookTime;
 		
 		public int getSizeInventory(){
 			return this.slots.length;
@@ -87,7 +87,7 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 	public void updateEntity()
 	{
 	boolean flag = false;
-	boolean flag1;
+	boolean flag1 = false;
 	
 		if(this.burnTime > 0)
 		{
@@ -102,6 +102,7 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 				
 				if(this.burnTime > 0)
 				{
+					flag1 = true;
 					if(this.slots[1] != null)
 					{
 						this.slots[1].stackSize--;
@@ -112,12 +113,36 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 						}
 					}
 				}
+				if(this.isBurning() && this.canSmelt())
+				{
+					this.cookTime++;
+					if(this.cookTime == this.smelterySpeed)
+					{
+						this.cookTime = 0;
+						this.smeltItem();
+						flag1 = true;
+					}
+				}
+				else
+				{
+					this.cookTime = 0;
+				}
 				if(flag != this.burnTime > 0)
 				{
 					Verbalsmeltery.updateVerbalSmelteryBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
 				}
 			}
 		}
+	}
+	
+	private void smeltItem()
+	{
+		
+	}
+	
+	public boolean isBurning()
+	{
+		return cookTime > 0;
 	}
 	
 	public static boolean canSmelt()
