@@ -85,6 +85,9 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 	}
 	public void updateEntity()
 	{
+	boolean flag;
+	boolean flag1;
+	
 		if(this.burnTime > 0)
 		{
 			this.burnTime--;
@@ -107,6 +110,10 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 							this.slots[1] = this.slots[1].getItem().getContainerItemStack(this.slots[1]);
 						}
 					}
+				}
+				if(flag != this.burnTime > 0)
+				{
+					VerbalSmeltery.updateVerbalSmelteryBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
 				}
 			}
 		}
