@@ -45,7 +45,7 @@ public class Verbalsmeltery extends BlockContainer {
 		this.blockIcon = iconRegister.registerIcon(ModInfo.ID.toLowerCase()
 				+ ":" + "Verbal_furnace_side");
 		this.iconFront = iconRegister.registerIcon(ModInfo.ID.toLowerCase()
-				+ ":" + (this.isActive ? "Verbal_furnace_front" : "Verbal_furnace_active_front"));
+				+ ":" + (this.isActive ? "Verbal_furnace_active_front" : "Verbal_furnace_front"));
 	}
 	
 	@SideOnly(Side.CLIENT)
