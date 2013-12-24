@@ -72,25 +72,43 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 					return itemstack;
 				}else{
 					itemstack = this.slots[i].splitStack(j);
+					
+					if(this.slots[i].stackSize == 0)
+					{
+						this.slots[i] = null;
+					}
+					return itemstack;
 				}
 		}
 		return null;
 	}
 
 	public ItemStack getStackInSlotOnClosing(int i) {
+		if(this.slots[i] != null)
+		{
+			ItemStack itemstack = this.slots[i];
+			this.slots[i] = null;
+			return itemstack;
+		}
 		return null;
 	}
 
 	public void setInventorySlotContents(int i, ItemStack itemstack) {
+		this.slots[i] = itemstack;
+		
+		if(itemstack != null && itemstack.stackSize > this.getInventoryStackLimit())
+		{
+			itemstack.stackSize = this.getInventoryStackLimit();
+		}
 		
 	}
 
 	public int getInventoryStackLimit() {
-		return 0;
+		return 64;
 	}
 
 	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-		return false;
+		return this.worldObj.getBlockTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : entityplayer.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
 	}
 
 	public void openChest() {
