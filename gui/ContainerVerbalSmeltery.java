@@ -68,7 +68,6 @@ public class ContainerVerbalSmeltery extends Container {
 		return null;
 	}
 
-	@Override
 	public boolean canInteractWith(EntityPlayer entityplayer) {
 		return this.verbalSmeltery.isUseableByPlayer(entityplayer);
 	}

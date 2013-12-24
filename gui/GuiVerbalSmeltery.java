@@ -34,7 +34,7 @@ public class GuiVerbalSmeltery extends GuiContainer{
 		
 	}
 	
-	protected void drawGuiContainerBackgroundLayer(float f, int i, int j) {
+	public void drawGuiContainerBackgroundLayer(float f, int i, int j) {
 		GL11.glColor4f(1F, 1F, 1F, 1F);
 		
 		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
