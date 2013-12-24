@@ -95,7 +95,7 @@ public class Verbalsmeltery extends BlockContainer {
 		return new TileEntityVerbalSmeltery();
 	}
 	
-public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLivingBase, ItemStack itemstack){
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLivingBase, ItemStack itemstack){
 		int l = MathHelper.floor_double((double) (entityLivingBase.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 		
 		if(l == 0){
@@ -119,6 +119,12 @@ public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase e
 		if(itemstack.hasDisplayName()) {
 			((TileEntityVerbalSmeltery)world.getBlockTileEntity(x, y, z)).setGuiDisplayName(itemstack.getDisplayName());
 		}
+		
+	}
+
+	public static void updateVerbalSmelteryBlockState(boolean b, World worldObj,
+			int xCoord, int yCoord, int zCoord) {
+		// TODO Auto-generated method stub
 		
 	}
 }

@@ -1,6 +1,7 @@
 package moreofeverything.tileentity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import moreofeverything.blocks.Verbalsmeltery;
 import moreofeverything.items.Items;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -85,7 +86,7 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 	}
 	public void updateEntity()
 	{
-	boolean flag;
+	boolean flag = false;
 	boolean flag1;
 	
 		if(this.burnTime > 0)
@@ -113,7 +114,7 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 				}
 				if(flag != this.burnTime > 0)
 				{
-					VerbalSmeltery.updateVerbalSmelteryBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+					Verbalsmeltery.updateVerbalSmelteryBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
 				}
 			}
 		}
