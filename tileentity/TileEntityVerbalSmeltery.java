@@ -1,6 +1,7 @@
 package moreofeverything.tileentity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import moreofeverything.blocks.Verbalsmeltery;
 import moreofeverything.items.Items;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -110,11 +111,20 @@ public class TileEntityVerbalSmeltery extends TileEntity implements ISidedInvent
 							this.slots[1] = this.slots[1].getItem().getContainerItemStack(this.slots[1]);
 						}
 					}
+					if(this.isBurning() && this.canSmelt())
+					{
+						this.cookTime++;
+					}
 				}
 				if(flag != this.burnTime > 0)
 				{
-					VerbalSmeltery.updateVerbalSmelteryBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+					flag1 = true;
+					Verbalsmeltery.updateVerbalSmelteryBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
 				}
+			}
+			if(flag1)
+			{
+				this.onInventoryChanged();
 			}
 		}
 	}
