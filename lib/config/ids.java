@@ -43,6 +43,21 @@ public class ids {
 	
 	public static int verbalhoe_actual;
 	public static final int verbalhoe_default = 16010;
+	
+	public static int scikaleblade_actual;
+	public static final int scikaleblade_default = 16010;
+	
+	public static int scikalepickaxe_actual;
+	public static final int scikalepickaxe_default = 16011;
+	
+	public static int scikaleaxe_actual;
+	public static final int scikaleaxe_default = 16012;
+	
+	public static int scikaleshovel_actual;
+	public static final int scikaleshovel_default = 16013;
+	
+	public static int scikalehoe_actual;
+	public static final int scikalehoe_default = 16014;
 
 	// Ids for Blocks
 	public static int verbalblock_actual;

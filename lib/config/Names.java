@@ -67,6 +67,21 @@ public class Names {
 	
 	public static final String Verbalhoe_unlocalizedName = "Verbal_hoe";
 	public static final String Verbalhoe_name = "Verbal Hoe";
+	
+	public static final String Scikaleblade_unlocalizedName = "Scikale_blade";
+	public static final String Scikaleblade_name = "Scikale Blade";
+	
+	public static final String Scikalepickaxe_unlocalizedName = "Scikale_pickaxe";
+	public static final String Scikalepickaxe_name = "Scikale Pickaxe";
+	
+	public static final String Scikaleaxe_unlocalizedName = "Scikale_axe";
+	public static final String Scikaleaxe_name = "Scikale Axe";
+	
+	public static final String Scikaleshovel_unlocalizedName = "Scikale_shovel";
+	public static final String Scikaleshovel_name = "Scikale Shovel";
+	
+	public static final String Scikalehoe_unlocalizedName = "Scikale_hoe";
+	public static final String Scikalehoe_name = "Scikale Hoe";
 
 		
 	

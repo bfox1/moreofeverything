@@ -32,6 +32,12 @@ public class Items {
 	public static Item verbalshovel;
 	public static Item verbalhoe;
 	
+	public static Item Scikaleblade;
+	public static Item Scikalepickaxe;
+	public static Item Scikaleaxe;
+	public static Item Scikaleshovel;
+	public static Item Scikalehoe;
+	
 	
 
 
@@ -57,6 +63,12 @@ public class Items {
 		verbalaxe = new Verbalaxe(ids.verbalaxe_actual, Enumtoolmofe.toolMaterialVerbal);
 		verbalshovel = new Verbalshovel(ids.verbalshovel_actual, Enumtoolmofe.toolMaterialVerbal);
 		verbalhoe = new Verbalhoe(ids.verbalhoe_actual, Enumtoolmofe.toolMaterialVerbal);
+		
+		Scikaleblade = new Scikaleblade(ids.scikaleblade_actual, Enumtoolmofe.toolMaterialScikale);
+		Scikalepickaxe = new Scikalepickaxe(ids.scikalepickaxe_actual, Enumtoolmofe.toolMaterialScikale);
+		Scikaleaxe = new Scikaleaxe(ids.scikaleaxe_actual, Enumtoolmofe.toolMaterialScikale);
+		Scikaleshovel= new Scikaleshovel(ids.scikaleshovel_actual, Enumtoolmofe.toolMaterialScikale);
+		Scikalehoe = new Scikalehoe(ids.scikalehoe_actual, Enumtoolmofe.toolMaterialScikale);
 		
 		if (Booleans.enableTool) {
 			Omnitool = new Omnitool(ids.omnitool_actual,

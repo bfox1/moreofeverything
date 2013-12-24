@@ -78,7 +78,7 @@ public class Blocks {
 		GameRegistry.registerBlock(verbalsmelteryIdle, Names.verbalsmelteryIdle_name);
 		verbalsmelteryActive = new Verbalsmeltery(ids.verbalsmelteryActive_actual, true).setUnlocalizedName(Names.verbalsmelteryActive_unlocalizedName).setHardness(3.5F).setLightValue(0.9F);
 		GameRegistry.registerBlock(verbalsmelteryActive, Names.verbalsmelteryActive_name);
-		GameRegistry.registerTileEntity(TileEntityVerbalSmeltery.class, Names.Verbal_name);
+		GameRegistry.registerTileEntity(TileEntityVerbalSmeltery.class, Names.verbalsmelteryIdle_name);
 
 		
 	}
