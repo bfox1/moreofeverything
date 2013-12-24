@@ -75,6 +75,21 @@ public class ConfigHandler {
 
 		ids.verbalhoe_actual = config.getItem(config.CATEGORY_ITEM,
 				Names.Verbalhoe_name, ids.verbalhoe_default).getInt() - 256;
+		
+		ids.scikaleblade_actual = config.getItem(config.CATEGORY_ITEM,
+				Names.Scikaleblade_name, ids.scikaleblade_default).getInt() - 256;
+		
+		ids.scikalepickaxe_actual = config.getItem(config.CATEGORY_ITEM,
+				Names.Scikalepickaxe_name, ids.scikalepickaxe_default).getInt() - 256;
+		
+		ids.scikaleaxe_actual = config.getItem(config.CATEGORY_ITEM,
+				Names.Scikaleaxe_name, ids.scikaleaxe_default).getInt() - 256;
+		
+		ids.scikaleshovel_actual = config.getItem(config.CATEGORY_ITEM,
+				Names.Scikaleshovel_name, ids.scikaleshovel_default).getInt() - 256;
+		
+		ids.scikalehoe_actual = config.getItem(config.CATEGORY_ITEM,
+				Names.Scikalehoe_name, ids.scikalehoe_default).getInt() - 256;
 
 		// To add these Boolean values into the config
 		Booleans.enableTool = config.get(BOOLEANS, Booleans.enableTool_name,
