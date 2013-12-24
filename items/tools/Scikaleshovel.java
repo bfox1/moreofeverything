@@ -1,4 +1,4 @@
-package moreofeverything.items;
+package moreofeverything.items.tools;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

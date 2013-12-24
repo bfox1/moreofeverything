@@ -6,17 +6,15 @@ import moreofeverything.moreofeverything;
 import moreofeverything.lib.ModInfo;
 import moreofeverything.lib.config.Names;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemAxe;
 
-public class Scikaleaxe extends ItemAxe {
+public class Infusedingot extends Item {
 
-	public Scikaleaxe(int id, EnumToolMaterial toolMaterial) {
-		super(id, toolMaterial);
-		this.setCreativeTab(moreofeverything.moreofeverythingTools);
-		setMaxStackSize(1);
-		this.setUnlocalizedName(Names.Scikaleaxe_unlocalizedName);
+	public Infusedingot(int id) {
+		super(id);
+		this.setCreativeTab(moreofeverything.moreofeverything);
+		setMaxStackSize(64);
+		this.setUnlocalizedName(Names.Infusedingot_unlocalizedName);
 	}
 	
 	@Override
@@ -24,10 +22,7 @@ public class Scikaleaxe extends ItemAxe {
 	public void registerIcons(IconRegister icon) {
 
 		itemIcon = icon.registerIcon(ModInfo.ID.toLowerCase() + ":"
-				+ Names.Scikaleaxe_unlocalizedName);
+				+ Names.Infusedingot_unlocalizedName);
+	}
 
 }
-
-}
-
-

@@ -15,6 +15,12 @@ public class Names {
 	public static final String Infusedstick_unlocalizedName = "Infused_stick";
 	public static final String Infusedstick_name = "Infused Stick";
 	
+	public static final String Infusedingot_unlocalizedName = "Infused_ingot";
+	public static final String Infusedingot_name = "Infused Ingot";
+	
+	public static final String Scikaleingot_unlocalizedName = "Scikale_ingot";
+	public static final String Scikaleingot_name = "Scikale Ingot";
+	
 		//Blocks
 	public static final String Verbalblock_unlocalizedName = "Verbal_block";
 	public static final String Verbalblock_name = "Verbal Block";
@@ -38,6 +44,9 @@ public class Names {
 		//Ore blocks
 	public static final String Verbalore_unlocalizedName = "Verbal_ore";
 	public static final String Verbalore_name = "Verbal Ore";
+	
+	public static final String Scikaleore_unlocalizedName = "Scikale_ore";
+	public static final String Scikaleore_name = "Scikale Ore";
 	
 		//Special blocks
 	public static final String verbalsmelteryIdle_unlocalizedName = "Verbal_smeltery";

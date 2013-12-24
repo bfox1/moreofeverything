@@ -41,6 +41,7 @@ public class Blocks {
 	
 		//Ore Blocks
 	public static Block verbalore;
+	public static Block scikaleore;
 	
 		//Special Block 
 	public static Block verbalsmelteryIdle;
@@ -71,6 +72,9 @@ public class Blocks {
 			//Ore block registration
 		verbalore = new Verbalore(ids.verbalore_actual);
 		GameRegistry.registerBlock(verbalore, Names.Verbalore_name);
+		
+		scikaleore = new Scikaleore(ids.scikaleore_actual);
+		GameRegistry.registerBlock(scikaleore, Names.Scikaleore_name);
 		
 			//Special block registration
 		

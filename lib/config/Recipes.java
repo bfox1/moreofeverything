@@ -36,6 +36,7 @@ public class Recipes {
 		CraftingManager.getInstance().addRecipe(
 				new ItemStack(Items.Infusedstick, 2), "GIG", "ISI", "GIG", 'S',
 				Item.stick, 'G', Item.glowstone, 'I', Items.Infusedverbal
+				
 
 		);
 		// Scepter
@@ -45,25 +46,47 @@ public class Recipes {
 		// VerbalSword
 		CraftingManager.getInstance().addRecipe(
 				new ItemStack(Items.verbalsword, 1), " D ", " D ", " S ", 'D',
-				Items.Infusedverbal, 'S', Items.Infusedstick);
+				Items.Infusedingot, 'S', Items.Infusedstick);
 		CraftingManager.getInstance().addRecipe(
 				new ItemStack(Items.verbalpickaxe, 1), "DDD", " S ", " S ",
-				'D', Items.Infusedverbal, 'S', Items.Infusedstick
+				'D', Items.Infusedingot, 'S', Items.Infusedstick
 
 		);
 
 		CraftingManager.getInstance().addRecipe(
 				new ItemStack(Items.verbalaxe, 1), "DD ", "DS ", " S ", 'D',
-				Items.Infusedverbal, 'S', Items.Infusedstick);
+				Items.Infusedingot, 'S', Items.Infusedstick);
 
 
 		CraftingManager.getInstance().addRecipe(
 				new ItemStack(Items.verbalshovel, 1), " D ", " S ", " S ", 'D',
-				Items.Infusedverbal, 'S', Items.Infusedstick);
+				Items.Infusedingot, 'S', Items.Infusedstick);
 
 		CraftingManager.getInstance().addRecipe(
 				new ItemStack(Items.verbalhoe, 1), "DD ", " S ", " S ", 'D',
-				Items.Infusedverbal, 'S', Items.Infusedstick);
+				Items.Infusedingot, 'S', Items.Infusedstick);
+		
+		CraftingManager.getInstance().addRecipe(
+				new ItemStack(Items.Scikaleblade, 1), " D ", " D ", " S ", 'D',
+				Items.Scikaleingot, 'S', Items.Infusedstick);
+		CraftingManager.getInstance().addRecipe(
+				new ItemStack(Items.Scikalepickaxe, 1), "DDD", " S ", " S ",
+				'D', Items.Scikaleingot, 'S', Items.Infusedstick
+
+		);
+
+		CraftingManager.getInstance().addRecipe(
+				new ItemStack(Items.Scikaleaxe, 1), "DD ", "DS ", " S ", 'D',
+				Items.Scikaleingot, 'S', Items.Infusedstick);
+
+
+		CraftingManager.getInstance().addRecipe(
+				new ItemStack(Items.Scikaleshovel, 1), " D ", " S ", " S ", 'D',
+				Items.Scikaleingot, 'S', Items.Infusedstick);
+
+		CraftingManager.getInstance().addRecipe(
+				new ItemStack(Items.Scikalehoe, 1), "DD ", " S ", " S ", 'D',
+				Items.Scikaleingot, 'S', Items.Infusedstick);
 
 		// Verbal from Verbalblock
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.verbal, 9),
@@ -81,5 +104,10 @@ public class Recipes {
 
 		}
 
+	}
+	public static void addSmeltingRecipes(){
+		GameRegistry.addSmelting(Items.Infusedverbal.itemID, new ItemStack(Items.Infusedingot), 5F);
+		
+		GameRegistry.addSmelting(Blocks.scikaleore.blockID, new ItemStack(Items.Scikaleingot), 5F);
 	}
 }

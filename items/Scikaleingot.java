@@ -6,17 +6,15 @@ import moreofeverything.moreofeverything;
 import moreofeverything.lib.ModInfo;
 import moreofeverything.lib.config.Names;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemPickaxe;
 
-public class Scikalepickaxe extends ItemPickaxe {
+public class Scikaleingot extends Item {
 
-	public Scikalepickaxe(int id, EnumToolMaterial toolMaterial) {
-		super(id, toolMaterial);
-		this.setCreativeTab(moreofeverything.moreofeverythingTools);
-		setMaxStackSize(1);
-		this.setUnlocalizedName(Names.Scikalepickaxe_unlocalizedName);
+	public Scikaleingot(int id) {
+		super(id);
+		this.setCreativeTab(moreofeverything.moreofeverything);
+		setMaxStackSize(64);
+		this.setUnlocalizedName(Names.Scikaleingot_unlocalizedName);
 	}
 	
 	@Override
@@ -24,8 +22,7 @@ public class Scikalepickaxe extends ItemPickaxe {
 	public void registerIcons(IconRegister icon) {
 
 		itemIcon = icon.registerIcon(ModInfo.ID.toLowerCase() + ":"
-				+ Names.Scikalepickaxe_unlocalizedName);
-
-}
+				+ Names.Scikaleingot_unlocalizedName);
+	}
 
 }

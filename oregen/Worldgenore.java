@@ -33,12 +33,16 @@ public class Worldgenore implements IWorldGenerator {
 
 	private void generateEnd(World world, Random random, int x, int y) {
 			//Adds ore. if you want to add stone generation, use same as below, except increase x and y to 64
-		this.addOreSpawn(Blocks.verbalore, world, random, x, y, 16, 16,
-				4 + random.nextInt(5), 25, 4, 40);
+
 
 	}
 
 	private void generateSurface(World world, Random random, int x, int y) {
+		
+		this.addOreSpawn(Blocks.verbalore, world, random, x, y, 16, 16,
+				4 + random.nextInt(5), 15, 4, 40);
+		this.addOreSpawn(Blocks.scikaleore, world, random, x, y, 16, 16,
+				4 + random.nextInt(5), 15, 4, 25);
 
 	}
 

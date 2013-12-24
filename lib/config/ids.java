@@ -21,6 +21,12 @@ public class ids {
 	
 	public static int infusedstick_actual;
 	public static final int infusedstick_default = 16007;
+	
+	public static int infusedingot_actual;
+	public static final int infusedingot_default = 16015;
+	
+	public static int scikaleingot_actual;
+	public static final int scikaleingot_default = 16016;
 		
 		//Ids for Tools
 	public static int omnitool_actual;
@@ -68,6 +74,9 @@ public class ids {
 	
 	public static int verbalore_actual;
 	public static final int verbalore_default = 3002;
+	
+	public static int scikaleore_actual;
+	public static final int scikaleore_default = 3009;
 	
 		//Id's for Half-slabs
 	public static int verbalBrickSlab_actual;

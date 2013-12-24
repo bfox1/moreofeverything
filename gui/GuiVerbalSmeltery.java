@@ -12,10 +12,9 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.client.resources.I18n;
 //GuiContainer
-@SideOnly(Side.CLIENT)
 public class GuiVerbalSmeltery extends GuiContainer{
 	
-	public static final ResourceLocation texture = new ResourceLocation(moreofeverything.lib.ModInfo.ID, "textures/gui/container/verbal_smeltery.png");
+	public static final ResourceLocation texture = new ResourceLocation(moreofeverything.lib.ModInfo.ID, "textures/gui/container/smeltery.png");
 	
 	public TileEntityVerbalSmeltery verbalSmeltery;
 

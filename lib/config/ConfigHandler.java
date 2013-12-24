@@ -37,6 +37,9 @@ public class ConfigHandler {
 		ids.verbalore_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.Verbalore_name, ids.verbalore_default).getInt();
 		
+		ids.scikaleore_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.Scikaleore_name, ids.scikaleore_default).getInt();
+		
 		ids.verbalsmelteryIdle_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.verbalsmelteryIdle_name, ids.verbalsmelteryIdle_default).getInt();
 		
@@ -53,6 +56,12 @@ public class ConfigHandler {
 				Names.Infusedstick_name, ids.infusedstick_default).getInt() - 256;
 		ids.infusedverbal_actual = config.getItem(config.CATEGORY_ITEM,
 				Names.Infusedverbal_name, ids.infusedverbal_default).getInt() - 256;
+		
+		ids.scikaleingot_actual = config.getItem(config.CATEGORY_ITEM,
+				Names.Scikaleingot_name, ids.scikaleingot_default).getInt() - 256;
+		
+		ids.infusedingot_actual = config.getItem(config.CATEGORY_ITEM,
+				Names.Infusedingot_name, ids.infusedingot_default).getInt() - 256;
 		
 			//ItemsConfig for Tools
 		ids.omnitool_actual = config.getItem(config.CATEGORY_ITEM,

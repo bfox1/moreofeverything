@@ -5,6 +5,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import moreofeverything.items.tools.Omnitool;
 import moreofeverything.items.tools.Scepter;
+import moreofeverything.items.tools.Scikaleaxe;
+import moreofeverything.items.tools.Scikaleblade;
+import moreofeverything.items.tools.Scikalehoe;
+import moreofeverything.items.tools.Scikalepickaxe;
+import moreofeverything.items.tools.Scikaleshovel;
 import moreofeverything.items.tools.Verbalaxe;
 import moreofeverything.items.tools.Verbalhoe;
 import moreofeverything.items.tools.Verbalpickaxe;
@@ -21,6 +26,8 @@ public class Items {
 	public static Item verbal;
 	public static Item Infusedverbal;
 	public static Item Infusedstick;
+	public static Item Infusedingot;
+	public static Item Scikaleingot;
 		//Materials
 	public static EnumToolMaterial toolMaterialVoid;
 		//Tools
@@ -49,6 +56,8 @@ public class Items {
 		verbal = new Verbal(ids.verbal_actual);
 		Infusedverbal = new Infusedverbal(ids.infusedverbal_actual);
 		Infusedstick = new Infusedstick(ids.infusedstick_actual);
+		Infusedingot = new Infusedingot(ids.infusedingot_actual);
+		Scikaleingot = new Scikaleingot(ids.scikaleingot_actual);
 
 		
 			//LEAVE COMMENT BELOW ALONE	
@@ -85,6 +94,8 @@ public class Items {
 		LanguageRegistry.addName(verbal, Names.Verbal_name);
 		LanguageRegistry.addName(Infusedverbal, Names.Infusedverbal_name);
 		LanguageRegistry.addName(Infusedstick, Names.Infusedstick_name);
+		LanguageRegistry.addName(Infusedingot, Names.Infusedingot_name);
+		LanguageRegistry.addName(Scikaleingot, Names.Scikaleingot_name);
 			//Tools
 		LanguageRegistry.addName(scepter, Names.Scepter_name);
 		LanguageRegistry.addName(verbalsword, Names.Verbalsword_name);

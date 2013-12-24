@@ -66,6 +66,7 @@ public class moreofeverything {
 		Items.init();
 		Blocks.init();
 		Recipes.init();
+		Recipes.addSmeltingRecipes();
 		LogHelper.log(Level.INFO, "Blocks, Items, Recipes have been loaded");
 
 	}

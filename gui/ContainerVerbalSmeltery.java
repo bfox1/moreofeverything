@@ -67,7 +67,6 @@ public class ContainerVerbalSmeltery extends Container {
 	{
 		return null;
 	}
-
 	public boolean canInteractWith(EntityPlayer entityplayer) {
 		return this.verbalSmeltery.isUseableByPlayer(entityplayer);
 	}
