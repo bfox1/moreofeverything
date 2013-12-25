@@ -6,6 +6,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHalfSlab;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSlab;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,6 +43,7 @@ public class Blocks {
 		//Ore Blocks
 	public static Block verbalore;
 	public static Block scikaleore;
+	public static Block scikaleoreglowing;
 	
 		//Special Block 
 	public static Block verbalsmelteryIdle;
@@ -73,8 +75,11 @@ public class Blocks {
 		verbalore = new Verbalore(ids.verbalore_actual);
 		GameRegistry.registerBlock(verbalore, Names.Verbalore_name);
 		
-		scikaleore = new Scikaleore(ids.scikaleore_actual);
+		scikaleore = new Scikaleore(ids.scikaleore_actual, false).setCreativeTab(moreofeverything.moreofeverything);;
 		GameRegistry.registerBlock(scikaleore, Names.Scikaleore_name);
+		
+		scikaleoreglowing = new Scikaleore(ids.scikaleoreglowing_actual, true).setLightValue(0.7F);
+		GameRegistry.registerBlock(scikaleoreglowing, Names.Scikaleoreglowing_name);
 		
 			//Special block registration
 		
@@ -99,6 +104,8 @@ public class Blocks {
 		LanguageRegistry.addName(verbalBlockDoubleSlab, Names.VerbalBlockDoubleSlab_name);
 			//Ore block Name registration
 		LanguageRegistry.addName(verbalore, Names.Verbalore_name);
+		LanguageRegistry.addName(scikaleore, Names.Scikaleore_name);
+		LanguageRegistry.addName(scikaleoreglowing, Names.Scikaleoreglowing_name);
 			//Special block Name registration
 		LanguageRegistry.addName(verbalsmelteryIdle, Names.verbalsmelteryIdle_name);
 		LanguageRegistry.addName(verbalsmelteryActive, Names.verbalsmelteryActive_name);
@@ -116,6 +123,7 @@ public class Blocks {
 		MinecraftForge.setBlockHarvestLevel(verbalBlockSingleSlab, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(verbalBlockDoubleSlab, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(verbalore, "pickaxe", 3);
+		MinecraftForge.setBlockHarvestLevel(scikaleore, "Scikalepickaxe", 4);
 	}
 	
 	public static void postInit(FMLPostInitializationEvent event)

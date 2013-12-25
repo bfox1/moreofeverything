@@ -91,6 +91,21 @@ public class Recipes {
 		// Verbal from Verbalblock
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.verbal, 9),
 				new ItemStack(Blocks.verbalblock, 1));
+		
+		CraftingManager.getInstance().addRecipe(new ItemStack(Items.unknown, 1),
+			"PTV",
+			"ASB",
+			"QSN",
+			'P', Items.verbalpickaxe,
+			'T', Items.Scikaleblade,
+			'V', Items.Scikalepickaxe,
+			'A', Items.verbalaxe,
+			'S', Items.Infusedstick,
+			'B', Items.Scikaleaxe,
+			'Q', Items.verbalshovel,
+			'N', Items.Scikaleshovel
+				
+				);
 
 		if (Booleans.hardRecipe) {
 			CraftingManager.getInstance().addRecipe(

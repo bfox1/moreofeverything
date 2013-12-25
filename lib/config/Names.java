@@ -48,6 +48,9 @@ public class Names {
 	public static final String Scikaleore_unlocalizedName = "Scikale_ore";
 	public static final String Scikaleore_name = "Scikale Ore";
 	
+	public static final String Scikaleoreglowing_unlocalizedName = "Scikale_ore_glowing";
+	public static final String Scikaleoreglowing_name = "Scikale Glowing";
+	
 		//Special blocks
 	public static final String verbalsmelteryIdle_unlocalizedName = "Verbal_smeltery";
 	public static final String verbalsmelteryIdle_name = "Verbal Smeltery";
@@ -58,6 +61,9 @@ public class Names {
 		//Tools
 	public static final String Omnitool_unlocalizedName = "OmniTool";
 	public static final String Omnitool_name = "Omni-Tool";
+	
+	public static final String unknown_unlocalizedName = "Unknownorigin";
+	public static final String unknown_name = "Unknown";
 	
 	public static final String Scepter_unlocalizedName = "Scepter";
 	public static final String Scepter_name = "Scepter";

@@ -3,6 +3,7 @@ package moreofeverything.items;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import moreofeverything.items.armor.EnumMaterialArmor;
 import moreofeverything.items.tools.Omnitool;
 import moreofeverything.items.tools.Scepter;
 import moreofeverything.items.tools.Scikaleaxe;
@@ -32,12 +33,16 @@ public class Items {
 	public static EnumToolMaterial toolMaterialVoid;
 		//Tools
 	public static Item Omnitool;
+	public static Item unknown;
 	public static Item scepter;
 	public static Item verbalsword;
 	public static Item verbalpickaxe;
 	public static Item verbalaxe;
 	public static Item verbalshovel;
 	public static Item verbalhoe;
+	
+	//Armor
+	public static Item verbalhelm;
 	
 	public static Item Scikaleblade;
 	public static Item Scikalepickaxe;
@@ -79,6 +84,11 @@ public class Items {
 		Scikaleshovel= new Scikaleshovel(ids.scikaleshovel_actual, Enumtoolmofe.toolMaterialScikale);
 		Scikalehoe = new Scikalehoe(ids.scikalehoe_actual, Enumtoolmofe.toolMaterialScikale);
 		
+		//Armor
+		//verbalhelm = new Verbalhelm(ids.verbalhelm_actual, EnumMaterialArmor.armorMaterialVerbal);
+		
+		unknown = new Unknowntool(ids.unknown_actaul, Enumtoolmofe.toolMaterialUber);
+		
 		if (Booleans.enableTool) {
 			Omnitool = new Omnitool(ids.omnitool_actual,
 					Enumtoolmofe.toolMaterialVerbal);
@@ -103,6 +113,13 @@ public class Items {
 		LanguageRegistry.addName(verbalaxe, Names.Verbalaxe_name);
 		LanguageRegistry.addName(verbalshovel, Names.Verbalshovel_name);
 		LanguageRegistry.addName(verbalhoe, Names.Verbalhoe_name);
+		
+		LanguageRegistry.addName(Scikaleblade, Names.Scikaleblade_name);
+		LanguageRegistry.addName(Scikalepickaxe, Names.Scikalepickaxe_name);
+		LanguageRegistry.addName(Scikaleaxe, Names.Scikaleaxe_name);
+		LanguageRegistry.addName(Scikaleshovel, Names.Scikaleshovel_name);
+		LanguageRegistry.addName(Scikalehoe, Names.Scikalehoe_name);
+		LanguageRegistry.addName(unknown, Names.unknown_name);
 		if (Booleans.enableTool) {
 			LanguageRegistry.addName(Omnitool, Names.Omnitool_name);
 		}

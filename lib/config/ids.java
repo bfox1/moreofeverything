@@ -64,6 +64,14 @@ public class ids {
 	
 	public static int scikalehoe_actual;
 	public static final int scikalehoe_default = 16014;
+	
+	public static int unknown_actaul;
+	public static final int unknown_default = 16017;
+	
+	
+	//Ids for Armor
+	public static int verbalhelm_actual;
+	public static final int verbalhelm_defualt = 16018;
 
 	// Ids for Blocks
 	public static int verbalblock_actual;
@@ -77,6 +85,9 @@ public class ids {
 	
 	public static int scikaleore_actual;
 	public static final int scikaleore_default = 3009;
+	
+	public static int scikaleoreglowing_actual;
+	public static final int scikaleoreglowing_default = 3010;
 	
 		//Id's for Half-slabs
 	public static int verbalBrickSlab_actual;

@@ -68,6 +68,7 @@ public class moreofeverything {
 		Recipes.init();
 		Recipes.addSmeltingRecipes();
 		LogHelper.log(Level.INFO, "Blocks, Items, Recipes have been loaded");
+		Blocks.addHarvestLevel();
 
 	}
 
@@ -82,7 +83,7 @@ public class moreofeverything {
 		LogHelper.log(Level.INFO, "Adding Names of Blocks, Items");
 		Items.addNames();
 		Blocks.addNames();
-		Blocks.addHarvestLevel();
+		//Blocks.addHarvestLevel();
 		LogHelper.log(Level.INFO, "Names of Items, Blocks added");
 		//Oregeneration.regWorld();
 		GameRegistry.registerWorldGenerator(new Worldgenore());

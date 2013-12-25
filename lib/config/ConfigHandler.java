@@ -40,6 +40,9 @@ public class ConfigHandler {
 		ids.scikaleore_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.Scikaleore_name, ids.scikaleore_default).getInt();
 		
+		ids.scikaleoreglowing_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.Scikaleoreglowing_name, ids.scikaleoreglowing_default).getInt();
+		
 		ids.verbalsmelteryIdle_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.verbalsmelteryIdle_name, ids.verbalsmelteryIdle_default).getInt();
 		
@@ -99,6 +102,9 @@ public class ConfigHandler {
 		
 		ids.scikalehoe_actual = config.getItem(config.CATEGORY_ITEM,
 				Names.Scikalehoe_name, ids.scikalehoe_default).getInt() - 256;
+		
+		ids.unknown_actaul = config.getItem(config.CATEGORY_ITEM,
+				Names.unknown_name, ids.unknown_default).getInt() - 256;
 
 		// To add these Boolean values into the config
 		Booleans.enableTool = config.get(BOOLEANS, Booleans.enableTool_name,
