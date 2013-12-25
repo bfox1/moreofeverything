@@ -18,6 +18,9 @@ public class ConfigHandler {
 		// BlocksConfig
 		ids.verbalblock_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.Verbalblock_name, ids.verbalblock_defualt).getInt();
+		
+		ids.marbleblock_actual = config.getBlock(config.CATEGORY_BLOCK,
+				Names.marbleblock_name, ids.marbleblock_default).getInt();
 
 		ids.verbalbrick_actual = config.getBlock(config.CATEGORY_BLOCK,
 				Names.Verbalbrick_name, ids.verbalbrick_default).getInt();

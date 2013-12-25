@@ -43,6 +43,7 @@ public class Worldgenore implements IWorldGenerator {
 				4 + random.nextInt(5), 15, 4, 40);
 		this.addOreSpawn(Blocks.scikaleore, world, random, x, y, 16, 16,
 				4 + random.nextInt(5), 15, 4, 25);
+		this.addOreSpawn(Blocks.marbleblock, world, random, x, y, 16, 16, 50, 5, 25, 50);
 
 	}
 

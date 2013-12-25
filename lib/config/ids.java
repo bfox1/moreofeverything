@@ -89,6 +89,9 @@ public class ids {
 	public static int scikaleoreglowing_actual;
 	public static final int scikaleoreglowing_default = 3010;
 	
+	public static int marbleblock_actual;
+	public static final int marbleblock_default = 3011;
+	
 		//Id's for Half-slabs
 	public static int verbalBrickSlab_actual;
 	public static final int verbalBrickSlab_default = 3005;
