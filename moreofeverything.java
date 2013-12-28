@@ -68,8 +68,13 @@ public class moreofeverything {
 		Recipes.init();
 		Recipes.addSmeltingRecipes();
 		LogHelper.log(Level.INFO, "Blocks, Items, Recipes have been loaded");
-		Blocks.addHarvestLevel();
-
+	}
+	
+	@EventHandler
+	public void load(FMLInitializationEvent event)
+	{
+        proxy.registerRenderers();
+        Blocks.addHarvestLevel();
 	}
 
 	// This happens DURING the startup
