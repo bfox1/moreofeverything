@@ -33,6 +33,7 @@ public class Blocks {
 	public static Block verbalblock;
 	public static Block verbalbrick;
 	public static Block marbleblock;
+	public static Block marblebrick;
 	
 		//Half-slabs
 	public static Block verbalBrickSingleSlab;
@@ -61,6 +62,9 @@ public class Blocks {
 		
 		verbalbrick = new Verbalbrick(ids.verbalbrick_actual);
 		GameRegistry.registerBlock(verbalbrick, Names.Verbalbrick_name);
+		
+		marblebrick = new Marblebrick(ids.marblebrick_actual);
+		GameRegistry.registerBlock(marblebrick, Names.marblebrick_name);
 		
 			//Half-slab Block registration
 		verbalBrickSingleSlab = new VerbalBrickSlab(ids.verbalBrickSlab_actual, false);
@@ -101,6 +105,7 @@ public class Blocks {
 		LanguageRegistry.addName(verbalblock, Names.Verbalblock_name);
 		LanguageRegistry.addName(verbalbrick, Names.Verbalbrick_name);
 		LanguageRegistry.addName(marbleblock, Names.marbleblock_name);
+		LanguageRegistry.addName(marblebrick, Names.marblebrick_name);
 			//Half-slab Name registration
 		LanguageRegistry.addName(verbalBrickSingleSlab, Names.VerbalbrickSlab_name);
 		LanguageRegistry.addName(verbalBrickDoubleSlab, Names.VerbalbrickDoubleSlab_name);

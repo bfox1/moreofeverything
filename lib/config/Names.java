@@ -31,6 +31,9 @@ public class Names {
 	public static final String marbleblock_unlocalizedName = "Marble_block";
 	public static final String marbleblock_name = "Marble Block";
 	
+	public static final String marblebrick_unlocalizedName = "Marble_brick";
+	public static final String marblebrick_name = "Marble Brick";
+	
 		//Slabs
 	public static final String VerbalbrickSlab_unlocalizedName = "Verbal_brick_slab";
 	public static final String VerbalbrickSlab_name = "Verbal Brick Slab";
@@ -116,5 +119,6 @@ public class Names {
 		"Metadata Item 2",
 		"Metadata Item 3"
 	};
+
 
 }

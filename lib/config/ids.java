@@ -92,6 +92,9 @@ public class ids {
 	public static int marbleblock_actual;
 	public static final int marbleblock_default = 3011;
 	
+	public static int marblebrick_actual;
+	public static final int marblebrick_default = 3012;
+	
 		//Id's for Half-slabs
 	public static int verbalBrickSlab_actual;
 	public static final int verbalBrickSlab_default = 3005;
