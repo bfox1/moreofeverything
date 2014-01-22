@@ -57,6 +57,9 @@ public class Names {
 	public static final String Scikaleoreglowing_unlocalizedName = "Scikale_ore_glowing";
 	public static final String Scikaleoreglowing_name = "Scikale Glowing";
 	
+	public static final String valeriumore_unlocalizedName = "Valerium_Ore";
+	public static final String valeriumore_name = "Valerium Ore";
+	
 		//Special blocks
 	public static final String verbalsmelteryIdle_unlocalizedName = "Verbal_smeltery";
 	public static final String verbalsmelteryIdle_name = "Verbal Smeltery";
@@ -119,6 +122,7 @@ public class Names {
 		"Metadata Item 2",
 		"Metadata Item 3"
 	};
+
 
 
 }

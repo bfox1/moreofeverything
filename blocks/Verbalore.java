@@ -21,7 +21,7 @@ public class Verbalore extends Block {
 		super(id, Material.rock);
 		this.setUnlocalizedName(Names.Verbalore_unlocalizedName);
 		this.setCreativeTab(moreofeverything.moreofeverything);
-		this.setHardness(2F);
+		this.setHardness(4.0F);
 		this.setResistance(5F);
 		this.setStepSound(Block.soundStoneFootstep);
 		this.setLightValue(0.5F);

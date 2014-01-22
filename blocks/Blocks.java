@@ -46,6 +46,7 @@ public class Blocks {
 	public static Block verbalore;
 	public static Block scikaleore;
 	public static Block scikaleoreglowing;
+	public static Block valeriumOre;
 	
 		//Special Block 
 	public static Block verbalsmelteryIdle;
@@ -65,6 +66,9 @@ public class Blocks {
 		
 		marblebrick = new Marblebrick(ids.marblebrick_actual);
 		GameRegistry.registerBlock(marblebrick, Names.marblebrick_name);
+		
+		valeriumOre = new valeriumOre(ids.valeriumore_actual);
+		GameRegistry.registerBlock(valeriumOre, Names.valeriumore_name);
 		
 			//Half-slab Block registration
 		verbalBrickSingleSlab = new VerbalBrickSlab(ids.verbalBrickSlab_actual, false);
@@ -99,6 +103,8 @@ public class Blocks {
 
 		
 	}
+		
+	
 
 	public static void addNames() {
 			//Basic block Name registration
@@ -133,7 +139,8 @@ public class Blocks {
 		MinecraftForge.setBlockHarvestLevel(verbalBlockSingleSlab, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(verbalBlockDoubleSlab, "pickaxe", 3);
 		MinecraftForge.setBlockHarvestLevel(verbalore, "pickaxe", 3);
-		MinecraftForge.setBlockHarvestLevel(scikaleore, "Scikalepickaxe", 4);
+		MinecraftForge.setBlockHarvestLevel(scikaleore, "pickaxe", 4);
+		
 	}
 	
 	public static void postInit(FMLPostInitializationEvent event)
